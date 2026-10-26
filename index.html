@@ -53,6 +53,13 @@
       height: auto;
     }
 
+    .cabecalho .logo {
+      /* O JPEG recebido tem fundo branco. A combinação abaixo preserva
+         a marca em branco e integra o fundo ao verde do cabeçalho. */
+      filter: grayscale(1) invert(1) contrast(1000%);
+      mix-blend-mode: screen;
+    }
+
     .cabecalho-frase {
       margin: 0;
       font-size: 17px;
@@ -246,16 +253,8 @@
     .rodape .logo {
       width: 280px;
       margin: auto;
-      /* Converte a versão branca da marca para verde. */
-      filter:
-        brightness(0)
-        saturate(100%)
-        invert(17%)
-        sepia(25%)
-        saturate(1030%)
-        hue-rotate(104deg)
-        brightness(92%)
-        contrast(94%);
+      filter: grayscale(1) contrast(1000%);
+      mix-blend-mode: multiply;
     }
 
     @media (min-width: 1600px) {
@@ -439,8 +438,8 @@
     <div class="cabecalho-conteudo">
       <img
         class="logo"
-        src="logo-mandi.png"
-        alt="MANDI — tempo para o que realmente importa."
+        src="logo-mandi.jpeg"
+        alt="Mandi"
       >
 
       <p class="cabecalho-frase">
@@ -587,8 +586,8 @@
   <footer class="rodape">
     <img
       class="logo"
-      src="logo-mandi.png"
-      alt="MANDI — tempo para o que realmente importa."
+      src="logo-mandi.jpeg"
+      alt="Mandi"
     >
   </footer>
 
