@@ -1,0 +1,13 @@
+# Arquivos locais e temporários
+.DS_Store
+Thumbs.db
+*.log
+
+# Nunca versionar credenciais
+.env
+.env.*
+*.key
+*.pem
+tokens/
+storage/
+
